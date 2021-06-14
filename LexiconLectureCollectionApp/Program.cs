@@ -28,11 +28,16 @@ namespace LexiconLectureCollectionApp
                 for (int x = 0; x < multi_10_table.GetLength(1); x++)
                 {
                     multi_10_table[y, x] = (y + 1) * (x + 1);
-                    Console.Write(multi_10_table[y, x] + "\t");
+                    //Console.Write(multi_10_table[y, x] + "\t");
+
+                    //{0,5}, multi_10_table =
+                    //{index in String.Format: What we should format which in this case is multi_10_table,
+                    //room between each item in the first argument aka multi_10_table}
+                    string currentNumber = String.Format("{0,5}", multi_10_table[y, x].ToString());
+                    Console.Write(currentNumber);
                 }
                 Console.WriteLine();
             }
-
 
             //for (int y = 0; y < multi_10_table.GetLength(0); y++)
             //{
